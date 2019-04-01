@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190401 09:13:05.908" generator="Robot 3.1.1 (Python 2.7.10 on darwin)">
+<suite source="/Users/mkamdar/cedar-screenshots-robot/automate" id="s1" name="Automate">
+<suite source="/Users/mkamdar/cedar-screenshots-robot/automate/valid_login.robot" id="s1-s1" name="Valid Login">
+<test id="s1-s1-t1" name="Valid Login">
+<kw name="Open Browser To Login Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190401 09:13:06.141" level="INFO">Opening browser 'Chrome' to base url 'https://cedar.metadatacenter.org'.</msg>
+<status status="PASS" endtime="20190401 09:13:10.508" starttime="20190401 09:13:06.141"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190401 09:13:12.043" starttime="20190401 09:13:10.509"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20190401 09:13:12.044" starttime="20190401 09:13:12.043"></status>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20190401 09:13:12.044" starttime="20190401 09:13:12.044"></status>
+</kw>
+<status status="PASS" endtime="20190401 09:13:12.045" starttime="20190401 09:13:12.044"></status>
+</kw>
+<status status="PASS" endtime="20190401 09:13:12.045" starttime="20190401 09:13:06.141"></status>
+</kw>
+<kw name="Input Username" library="resource">
+<arguments>
+<arg>thecedarteam@gmail.com</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>username</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20190401 09:13:12.045" level="INFO">Typing text 'thecedarteam@gmail.com' into text field 'username'.</msg>
+<status status="PASS" endtime="20190401 09:13:12.185" starttime="20190401 09:13:12.045"></status>
+</kw>
+<status status="PASS" endtime="20190401 09:13:12.185" starttime="20190401 09:13:12.045"></status>
+</kw>
+<kw name="Input Password" library="resource">
+<arguments>
+<arg>markmusen007</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190401 09:13:12.186" level="INFO">Typing text 'markmusen007' into text field 'password'.</msg>
+<status status="PASS" endtime="20190401 09:13:12.255" starttime="20190401 09:13:12.186"></status>
+</kw>
+<status status="PASS" endtime="20190401 09:13:12.256" starttime="20190401 09:13:12.186"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190401 09:13:12.738" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190401 09:13:12.738" starttime="20190401 09:13:12.256"></status>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>login</arg>
+</arguments>
+<msg timestamp="20190401 09:13:12.739" level="INFO">Clicking button 'login'.</msg>
+<status status="PASS" endtime="20190401 09:13:13.175" starttime="20190401 09:13:12.739"></status>
+</kw>
+<status status="PASS" endtime="20190401 09:13:13.175" starttime="20190401 09:13:12.739"></status>
+</kw>
+<kw name="Projects Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Project Cedar</arg>
+</arguments>
+<msg timestamp="20190401 09:13:13.179" level="INFO">Page title is 'Project Cedar'.</msg>
+<status status="PASS" endtime="20190401 09:13:13.179" starttime="20190401 09:13:13.175"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20190401 09:13:13.180" starttime="20190401 09:13:13.179"></status>
+</kw>
+<status status="PASS" endtime="20190401 09:13:13.180" starttime="20190401 09:13:13.175"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20190401 09:13:13.251" starttime="20190401 09:13:13.180"></status>
+</kw>
+<status status="PASS" endtime="20190401 09:13:13.251" critical="yes" starttime="20190401 09:13:06.140"></status>
+</test>
+<doc>A test suite with a single test for valid login.</doc>
+<status status="PASS" endtime="20190401 09:13:13.253" starttime="20190401 09:13:05.932"></status>
+</suite>
+<status status="PASS" endtime="20190401 09:13:13.255" starttime="20190401 09:13:05.911"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Automate" pass="1">Automate</stat>
+<stat fail="0" id="s1-s1" name="Valid Login" pass="1">Automate.Valid Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

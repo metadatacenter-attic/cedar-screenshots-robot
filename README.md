@@ -10,3 +10,8 @@ Steps to run the Python Robot Framework:
 - Install the following Python libraries: image, robotframework, robotframework-selenium2library, robotframework-selenium2screenshots
 
 (e.g. pip install robotframework --user, or pip install -r requirements.txt --user)
+
+- Load the scripts in a "automate" folder and run
+
+~/Library/Python/2.7/bin/robot automate/
+

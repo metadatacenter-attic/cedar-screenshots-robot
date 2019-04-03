@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     A test suite with a single test for valid login.
+Documentation     A test suite with tests for login/element creation/template creation
 Library           Selenium2Library
 Library           Selenium2Screenshots
 Test Setup  Set Screenshot Directory    screenshots/
@@ -33,6 +33,7 @@ Create New Element
     Add Text Field    State    ""    "True"
     Add Text Field    Zip Code    "5-digit zip code in US"    "True"
     Click Save Button    button-save-element
+    Capture Page Screenshot    elementDetails.png
     Go Back To CEDAR Workspace
 
 Create New Template

@@ -2,6 +2,7 @@
 Documentation     A test suite with a single test for valid login.
 Library           Selenium2Library
 Library           Selenium2Screenshots
+Test Setup  Set Screenshot Directory    screenshots/
 Resource          resource.robot
 
 *** Variables ***
@@ -15,10 +16,10 @@ Valid Login
     Capture Page Screenshot    login.png
     Submit Credentials
     Projects Page Should Be Open
-    Capture Page Screenshot    myworkspace.png
 
 Create New Template
     Click New Button
+    Capture Page Screenshot    myworkspace.png
     Click Link  id=button-create-template
     Input Field Name By ID  template-name  Demonstration Template
     Input Field Name By ID  template-identifier  demo-template

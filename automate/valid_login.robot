@@ -15,7 +15,25 @@ Valid Login
     Input Password    markmusen007
     Capture Page Screenshot    login.png
     Submit Credentials
-    Projects Page Should Be Open
+    CEDAR Workspace Should Be Open
+
+Create New Element
+    Click New Button
+    Click Link  id=button-create-element
+    Input Field Name By ID  element-name  Address
+    Input Field Name By ID  element-identifier  demo-address
+    Input Field Name By ID  element-description  "A demo element to document address"
+    Add CEDAR Controlled Term    "Address"    "C25407"
+    Click Button By Class    "dropdown-toggle"
+    Capture Page Screenshot    elementSetType.png
+    Click Button By Class    "close"
+    Add Text Field    Address Line 1    First Part of Street Address    "True"
+    Add Text Field    Address Line 2    Additional Street Address Information    "False"
+    Add Text Field    City    ""    "True"
+    Add Text Field    State    ""    "True"
+    Add Text Field    Zip Code    "5-digit zip code in US"    "True"
+    Click Save Button    button-save-element
+    Go Back To CEDAR Workspace
 
 Create New Template
     Click New Button
@@ -25,22 +43,18 @@ Create New Template
     Input Field Name By ID  template-identifier  demo-template
     Input Field Name By ID  template-description  "A demo template to show automation"
     Capture Page Screenshot    addTemplatename.png
-    Click Link  id=button-add-field-textfield
-    Input Field Name By Label  "Enter Field Name"  Type of Injury
-    Select Tab  "required-tab"
-    Select Range  "date-range"
-    Capture Page Screenshot    setRequired.png
+    Add Text Field    Type of Injury    Type of injury being identified    "True"
     Select Tab  "value-controlled-terms-tab"
     Select Ontology Term  "Injury"  "C3671"
     Capture Page Screenshot    addOntologyTerm.png
     Select Ontology Term  "Chemical Exposure"  "C36290"
+    Add Text Field    Anatomic Location    Location of the item being identified    "False"
+    Select Tab  "value-controlled-terms-tab"
+    Select Ontology Term  "anatomical structure"  "RID13390"
     Click Save Button    button-save-template
+    Go Back To CEDAR Workspace
 
 Create New Field
     Click New Button
     Click Link  id=button-create-field
-
-Create New Element
-    Click New Button
-    Click Link  id=button-create-element
-
+    Go Back To CEDAR Workspace

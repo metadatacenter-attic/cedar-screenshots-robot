@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20190403 01:49:16.791" generator="Robot 3.1.1 (Python 2.7.10 on darwin)">
+<robot rpa="false" generated="20190403 10:02:15.716" generator="Robot 3.1.1 (Python 2.7.10 on darwin)">
 <suite source="/Users/mkamdar/cedar-screenshots-robot/automate" id="s1" name="Automate">
 <suite source="/Users/mkamdar/cedar-screenshots-robot/automate/valid_login.robot" id="s1-s1" name="Valid Login">
 <test id="s1-s1-t1" name="Valid Login">
+<kw type="setup" name="Set Screenshot Directory" library="Selenium2Library">
+<doc>Sets the directory for captured screenshots.</doc>
+<arguments>
+<arg>screenshots/</arg>
+</arguments>
+<status status="PASS" endtime="20190403 10:02:15.960" starttime="20190403 10:02:15.959"></status>
+</kw>
 <kw name="Open Browser To Login Page" library="resource">
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the given ``url``.</doc>
@@ -10,21 +17,21 @@
 <arg>${LOGIN URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20190403 01:49:17.020" level="INFO">Opening browser 'Chrome' to base url 'https://cedar.metadatacenter.org'.</msg>
-<status status="PASS" endtime="20190403 01:49:21.329" starttime="20190403 01:49:17.020"></status>
+<msg timestamp="20190403 10:02:15.960" level="INFO">Opening browser 'Chrome' to base url 'https://cedar.metadatacenter.org'.</msg>
+<status status="PASS" endtime="20190403 10:02:21.305" starttime="20190403 10:02:15.960"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20190403 01:49:23.157" starttime="20190403 01:49:21.330"></status>
+<status status="PASS" endtime="20190403 10:02:23.308" starttime="20190403 10:02:21.306"></status>
 </kw>
 <kw name="Set Selenium Speed" library="Selenium2Library">
 <doc>Sets the delay that is waited after each Selenium command.</doc>
 <arguments>
 <arg>${MIN_DELAY}</arg>
 </arguments>
-<status status="PASS" endtime="20190403 01:49:23.158" starttime="20190403 01:49:23.157"></status>
+<status status="PASS" endtime="20190403 10:02:23.309" starttime="20190403 10:02:23.308"></status>
 </kw>
-<status status="PASS" endtime="20190403 01:49:23.158" starttime="20190403 01:49:17.019"></status>
+<status status="PASS" endtime="20190403 10:02:23.309" starttime="20190403 10:02:15.960"></status>
 </kw>
 <kw name="Input Username" library="resource">
 <arguments>
@@ -36,10 +43,10 @@
 <arg>username</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20190403 01:49:23.159" level="INFO">Typing text 'thecedarteam@gmail.com' into text field 'username'.</msg>
-<status status="PASS" endtime="20190403 01:49:23.288" starttime="20190403 01:49:23.159"></status>
+<msg timestamp="20190403 10:02:23.310" level="INFO">Typing text 'thecedarteam@gmail.com' into text field 'username'.</msg>
+<status status="PASS" endtime="20190403 10:02:23.429" starttime="20190403 10:02:23.310"></status>
 </kw>
-<status status="PASS" endtime="20190403 01:49:23.288" starttime="20190403 01:49:23.158"></status>
+<status status="PASS" endtime="20190403 10:02:23.430" starttime="20190403 10:02:23.309"></status>
 </kw>
 <kw name="Input Password" library="resource">
 <arguments>
@@ -51,18 +58,18 @@
 <arg>password</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20190403 01:49:23.289" level="INFO">Typing text 'markmusen007' into text field 'password'.</msg>
-<status status="PASS" endtime="20190403 01:49:23.358" starttime="20190403 01:49:23.288"></status>
+<msg timestamp="20190403 10:02:23.431" level="INFO">Typing text 'markmusen007' into text field 'password'.</msg>
+<status status="PASS" endtime="20190403 10:02:23.499" starttime="20190403 10:02:23.430"></status>
 </kw>
-<status status="PASS" endtime="20190403 01:49:23.358" starttime="20190403 01:49:23.288"></status>
+<status status="PASS" endtime="20190403 10:02:23.499" starttime="20190403 10:02:23.430"></status>
 </kw>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
 <arguments>
 <arg>login.png</arg>
 </arguments>
-<msg timestamp="20190403 01:49:23.848" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="login.png"&gt;&lt;img src="login.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20190403 01:49:23.848" starttime="20190403 01:49:23.358"></status>
+<msg timestamp="20190403 10:02:23.987" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/login.png"&gt;&lt;img src="screenshots/login.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190403 10:02:23.987" starttime="20190403 10:02:23.500"></status>
 </kw>
 <kw name="Submit Credentials" library="resource">
 <kw name="Click Button" library="Selenium2Library">
@@ -70,65 +77,727 @@
 <arguments>
 <arg>login</arg>
 </arguments>
-<msg timestamp="20190403 01:49:23.849" level="INFO">Clicking button 'login'.</msg>
-<status status="PASS" endtime="20190403 01:49:24.279" starttime="20190403 01:49:23.849"></status>
+<msg timestamp="20190403 10:02:23.988" level="INFO">Clicking button 'login'.</msg>
+<status status="PASS" endtime="20190403 10:02:24.420" starttime="20190403 10:02:23.988"></status>
 </kw>
-<status status="PASS" endtime="20190403 01:49:24.279" starttime="20190403 01:49:23.848"></status>
+<status status="PASS" endtime="20190403 10:02:24.420" starttime="20190403 10:02:23.987"></status>
 </kw>
-<kw name="Projects Page Should Be Open" library="resource">
+<kw name="CEDAR Workspace Should Be Open" library="resource">
 <kw name="Title Should Be" library="Selenium2Library">
 <doc>Verifies that current page title equals ``title``.</doc>
 <arguments>
 <arg>Project Cedar</arg>
 </arguments>
-<msg timestamp="20190403 01:49:24.284" level="INFO">Page title is 'Project Cedar'.</msg>
-<status status="PASS" endtime="20190403 01:49:24.284" starttime="20190403 01:49:24.280"></status>
+<msg timestamp="20190403 10:02:24.425" level="INFO">Page title is 'Project Cedar'.</msg>
+<status status="PASS" endtime="20190403 10:02:24.425" starttime="20190403 10:02:24.421"></status>
 </kw>
 <kw name="Set Selenium Speed" library="Selenium2Library">
 <doc>Sets the delay that is waited after each Selenium command.</doc>
 <arguments>
 <arg>${DELAY}</arg>
 </arguments>
-<status status="PASS" endtime="20190403 01:49:24.285" starttime="20190403 01:49:24.284"></status>
+<status status="PASS" endtime="20190403 10:02:24.426" starttime="20190403 10:02:24.425"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="Selenium2Library">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>${WAITTIME}</arg>
 </arguments>
-<status status="PASS" endtime="20190403 01:49:26.289" starttime="20190403 01:49:24.285"></status>
+<status status="PASS" endtime="20190403 10:02:26.428" starttime="20190403 10:02:24.426"></status>
 </kw>
-<status status="PASS" endtime="20190403 01:49:26.289" starttime="20190403 01:49:24.280"></status>
+<status status="PASS" endtime="20190403 10:02:26.428" starttime="20190403 10:02:24.421"></status>
 </kw>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<arguments>
-<arg>myworkspace.png</arg>
-</arguments>
-<msg timestamp="20190403 01:49:28.715" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="myworkspace.png"&gt;&lt;img src="myworkspace.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20190403 01:49:28.715" starttime="20190403 01:49:26.290"></status>
-</kw>
-<status status="PASS" endtime="20190403 01:49:28.715" critical="yes" starttime="20190403 01:49:17.019"></status>
+<status status="PASS" endtime="20190403 10:02:26.428" critical="yes" starttime="20190403 10:02:15.959"></status>
 </test>
-<test id="s1-s1-t2" name="Create New Template">
+<test id="s1-s1-t2" name="Create New Element">
+<kw type="setup" name="Set Screenshot Directory" library="Selenium2Library">
+<doc>Sets the directory for captured screenshots.</doc>
+<arguments>
+<arg>screenshots/</arg>
+</arguments>
+<status status="PASS" endtime="20190403 10:02:26.431" starttime="20190403 10:02:26.431"></status>
+</kw>
 <kw name="Click New Button" library="resource">
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>button-create</arg>
 </arguments>
-<msg timestamp="20190403 01:49:28.718" level="INFO">Clicking button 'button-create'.</msg>
-<status status="PASS" endtime="20190403 01:49:41.825" starttime="20190403 01:49:28.718"></status>
+<msg timestamp="20190403 10:02:26.432" level="INFO">Clicking button 'button-create'.</msg>
+<status status="PASS" endtime="20190403 10:02:39.542" starttime="20190403 10:02:26.432"></status>
 </kw>
-<status status="PASS" endtime="20190403 01:49:41.826" starttime="20190403 01:49:28.718"></status>
+<status status="PASS" endtime="20190403 10:02:39.542" starttime="20190403 10:02:26.432"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>id=button-create-element</arg>
+</arguments>
+<msg timestamp="20190403 10:02:39.543" level="INFO">Clicking link 'id=button-create-element'.</msg>
+<status status="PASS" endtime="20190403 10:02:45.619" starttime="20190403 10:02:39.543"></status>
+</kw>
+<kw name="Input Field Name By ID" library="resource">
+<arguments>
+<arg>element-name</arg>
+<arg>Address</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${fieldname}</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 10:02:45.621" level="INFO">Typing text 'Address' into text field 'id=element-name'.</msg>
+<status status="PASS" endtime="20190403 10:02:51.747" starttime="20190403 10:02:45.620"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:02:51.747" starttime="20190403 10:02:45.619"></status>
+</kw>
+<kw name="Input Field Name By ID" library="resource">
+<arguments>
+<arg>element-identifier</arg>
+<arg>demo-address</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${fieldname}</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 10:02:51.749" level="INFO">Typing text 'demo-address' into text field 'id=element-identifier'.</msg>
+<status status="PASS" endtime="20190403 10:02:57.896" starttime="20190403 10:02:51.748"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:02:57.896" starttime="20190403 10:02:51.747"></status>
+</kw>
+<kw name="Input Field Name By ID" library="resource">
+<arguments>
+<arg>element-description</arg>
+<arg>"A demo element to document address"</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${fieldname}</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 10:02:57.897" level="INFO">Typing text '"A demo element to document address"' into text field 'id=element-description'.</msg>
+<status status="PASS" endtime="20190403 10:03:04.147" starttime="20190403 10:02:57.897"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:03:04.147" starttime="20190403 10:02:57.896"></status>
+</kw>
+<kw name="Add CEDAR Controlled Term" library="resource">
+<arguments>
+<arg>"Address"</arg>
+<arg>"C25407"</arg>
+</arguments>
+<kw name="Click Button By Class" library="resource">
+<arguments>
+<arg>show-type</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[contains(@class, ${btnname})]</arg>
+</arguments>
+<msg timestamp="20190403 10:03:04.149" level="INFO">Clicking element '//button[contains(@class, show-type)]'.</msg>
+<status status="PASS" endtime="20190403 10:03:08.232" starttime="20190403 10:03:04.149"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:03:08.233" starttime="20190403 10:03:04.148"></status>
+</kw>
+<kw name="Input Ontology Term" library="resource">
+<arguments>
+<arg>${ontosearchstring}</arg>
+<arg>${ontoterm}</arg>
+</arguments>
+<kw name="Input Field Name By ID" library="resource">
+<arguments>
+<arg>field-search-input</arg>
+<arg>${ontosearchstring}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${fieldname}</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 10:03:08.234" level="INFO">Typing text '"Address"' into text field 'id=field-search-input'.</msg>
+<status status="PASS" endtime="20190403 10:03:14.518" starttime="20190403 10:03:08.234"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:03:14.518" starttime="20190403 10:03:08.234"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20190403 10:03:16.521" starttime="20190403 10:03:14.519"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//td[contains(text(), ${ontoterm})]</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" endtime="20190403 10:03:18.537" starttime="20190403 10:03:16.521"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//td[contains(text(), ${ontoterm})]</arg>
+</arguments>
+<msg timestamp="20190403 10:03:18.538" level="INFO">Clicking element '//td[contains(text(), "C25407")]'.</msg>
+<status status="PASS" endtime="20190403 10:03:22.693" starttime="20190403 10:03:18.537"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:03:22.693" starttime="20190403 10:03:08.233"></status>
+</kw>
+<kw name="Click Button By Class" library="resource">
+<arguments>
+<arg>"btn-add-term"</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[contains(@class, ${btnname})]</arg>
+</arguments>
+<msg timestamp="20190403 10:03:22.695" level="INFO">Clicking element '//button[contains(@class, "btn-add-term")]'.</msg>
+<status status="PASS" endtime="20190403 10:03:26.808" starttime="20190403 10:03:22.694"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:03:26.808" starttime="20190403 10:03:22.694"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:03:26.809" starttime="20190403 10:03:04.148"></status>
+</kw>
+<kw name="Click Button By Class" library="resource">
+<arguments>
+<arg>"dropdown-toggle"</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[contains(@class, ${btnname})]</arg>
+</arguments>
+<msg timestamp="20190403 10:03:26.810" level="INFO">Clicking element '//button[contains(@class, "dropdown-toggle")]'.</msg>
+<status status="PASS" endtime="20190403 10:03:30.895" starttime="20190403 10:03:26.809"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:03:30.896" starttime="20190403 10:03:26.809"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>elementSetType.png</arg>
+</arguments>
+<msg timestamp="20190403 10:03:33.334" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/elementSetType.png"&gt;&lt;img src="screenshots/elementSetType.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190403 10:03:33.335" starttime="20190403 10:03:30.896"></status>
+</kw>
+<kw name="Click Button By Class" library="resource">
+<arguments>
+<arg>"close"</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[contains(@class, ${btnname})]</arg>
+</arguments>
+<msg timestamp="20190403 10:03:33.336" level="INFO">Clicking element '//button[contains(@class, "close")]'.</msg>
+<status status="PASS" endtime="20190403 10:03:37.457" starttime="20190403 10:03:33.335"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:03:37.457" starttime="20190403 10:03:33.335"></status>
+</kw>
+<kw name="Add Text Field" library="resource">
+<arguments>
+<arg>Address Line 1</arg>
+<arg>First Part of Street Address</arg>
+<arg>"True"</arg>
+</arguments>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>id=button-add-field-textfield</arg>
+</arguments>
+<msg timestamp="20190403 10:03:37.458" level="INFO">Clicking link 'id=button-add-field-textfield'.</msg>
+<status status="PASS" endtime="20190403 10:03:43.573" starttime="20190403 10:03:37.458"></status>
+</kw>
+<kw name="Input Field Name By Label" library="resource">
+<arguments>
+<arg>"Enter Field Name"</arg>
+<arg>${fieldname}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@aria-label=${fieldlabel}]</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 10:03:43.574" level="INFO">Typing text 'Address Line 1' into text field '//input[@aria-label="Enter Field Name"]'.</msg>
+<status status="PASS" endtime="20190403 10:03:49.703" starttime="20190403 10:03:43.574"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:03:49.703" starttime="20190403 10:03:43.573"></status>
+</kw>
+<kw name="Input Field Name By Label" library="resource">
+<arguments>
+<arg>"Enter Field Help Text"</arg>
+<arg>${fieldhelptext}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@aria-label=${fieldlabel}]</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 10:03:49.704" level="INFO">Typing text 'First Part of Street Address' into text field '//input[@aria-label="Enter Field Help Text"]'.</msg>
+<status status="PASS" endtime="20190403 10:03:55.865" starttime="20190403 10:03:49.704"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:03:55.865" starttime="20190403 10:03:49.703"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${is_required} == 'True'</arg>
+<arg>Set Text Field Required</arg>
+</arguments>
+<kw name="Set Text Field Required" library="resource">
+<kw name="Select Tab" library="resource">
+<arguments>
+<arg>"required-tab"</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[contains(@class, ${tabname})]</arg>
+</arguments>
+<msg timestamp="20190403 10:03:55.868" level="INFO">Clicking element '//div[contains(@class, "required-tab")]'.</msg>
+<status status="PASS" endtime="20190403 10:03:59.966" starttime="20190403 10:03:55.868"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:03:59.967" starttime="20190403 10:03:55.867"></status>
+</kw>
+<kw name="Select Range" library="resource">
+<arguments>
+<arg>"date-range"</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[contains(@class, ${tabname})]</arg>
+</arguments>
+<msg timestamp="20190403 10:03:59.968" level="INFO">Clicking element '//div[contains(@class, "date-range")]'.</msg>
+<status status="PASS" endtime="20190403 10:04:04.043" starttime="20190403 10:03:59.968"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:04:04.043" starttime="20190403 10:03:59.967"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>setRequired.png</arg>
+</arguments>
+<msg timestamp="20190403 10:04:06.454" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/setRequired.png"&gt;&lt;img src="screenshots/setRequired.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190403 10:04:06.455" starttime="20190403 10:04:04.043"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:04:06.455" starttime="20190403 10:03:55.866"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:04:06.455" starttime="20190403 10:03:55.866"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:04:06.455" starttime="20190403 10:03:37.457"></status>
+</kw>
+<kw name="Add Text Field" library="resource">
+<arguments>
+<arg>Address Line 2</arg>
+<arg>Additional Street Address Information</arg>
+<arg>"False"</arg>
+</arguments>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>id=button-add-field-textfield</arg>
+</arguments>
+<msg timestamp="20190403 10:04:06.456" level="INFO">Clicking link 'id=button-add-field-textfield'.</msg>
+<status status="PASS" endtime="20190403 10:04:12.779" starttime="20190403 10:04:06.455"></status>
+</kw>
+<kw name="Input Field Name By Label" library="resource">
+<arguments>
+<arg>"Enter Field Name"</arg>
+<arg>${fieldname}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@aria-label=${fieldlabel}]</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 10:04:12.780" level="INFO">Typing text 'Address Line 2' into text field '//input[@aria-label="Enter Field Name"]'.</msg>
+<status status="PASS" endtime="20190403 10:04:18.906" starttime="20190403 10:04:12.780"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:04:18.906" starttime="20190403 10:04:12.779"></status>
+</kw>
+<kw name="Input Field Name By Label" library="resource">
+<arguments>
+<arg>"Enter Field Help Text"</arg>
+<arg>${fieldhelptext}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@aria-label=${fieldlabel}]</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 10:04:18.907" level="INFO">Typing text 'Additional Street Address Information' into text field '//input[@aria-label="Enter Field Help Text"]'.</msg>
+<status status="PASS" endtime="20190403 10:04:25.083" starttime="20190403 10:04:18.907"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:04:25.084" starttime="20190403 10:04:18.906"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${is_required} == 'True'</arg>
+<arg>Set Text Field Required</arg>
+</arguments>
+<status status="PASS" endtime="20190403 10:04:25.084" starttime="20190403 10:04:25.084"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:04:25.084" starttime="20190403 10:04:06.455"></status>
+</kw>
+<kw name="Add Text Field" library="resource">
+<arguments>
+<arg>City</arg>
+<arg>""</arg>
+<arg>"True"</arg>
+</arguments>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>id=button-add-field-textfield</arg>
+</arguments>
+<msg timestamp="20190403 10:04:25.085" level="INFO">Clicking link 'id=button-add-field-textfield'.</msg>
+<status status="PASS" endtime="20190403 10:04:31.332" starttime="20190403 10:04:25.085"></status>
+</kw>
+<kw name="Input Field Name By Label" library="resource">
+<arguments>
+<arg>"Enter Field Name"</arg>
+<arg>${fieldname}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@aria-label=${fieldlabel}]</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 10:04:31.333" level="INFO">Typing text 'City' into text field '//input[@aria-label="Enter Field Name"]'.</msg>
+<status status="PASS" endtime="20190403 10:04:37.440" starttime="20190403 10:04:31.333"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:04:37.440" starttime="20190403 10:04:31.332"></status>
+</kw>
+<kw name="Input Field Name By Label" library="resource">
+<arguments>
+<arg>"Enter Field Help Text"</arg>
+<arg>${fieldhelptext}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@aria-label=${fieldlabel}]</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 10:04:37.442" level="INFO">Typing text '""' into text field '//input[@aria-label="Enter Field Help Text"]'.</msg>
+<status status="PASS" endtime="20190403 10:04:43.554" starttime="20190403 10:04:37.441"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:04:43.554" starttime="20190403 10:04:37.440"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${is_required} == 'True'</arg>
+<arg>Set Text Field Required</arg>
+</arguments>
+<kw name="Set Text Field Required" library="resource">
+<kw name="Select Tab" library="resource">
+<arguments>
+<arg>"required-tab"</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[contains(@class, ${tabname})]</arg>
+</arguments>
+<msg timestamp="20190403 10:04:43.557" level="INFO">Clicking element '//div[contains(@class, "required-tab")]'.</msg>
+<status status="PASS" endtime="20190403 10:04:47.671" starttime="20190403 10:04:43.556"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:04:47.672" starttime="20190403 10:04:43.556"></status>
+</kw>
+<kw name="Select Range" library="resource">
+<arguments>
+<arg>"date-range"</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[contains(@class, ${tabname})]</arg>
+</arguments>
+<msg timestamp="20190403 10:04:47.673" level="INFO">Clicking element '//div[contains(@class, "date-range")]'.</msg>
+<status status="PASS" endtime="20190403 10:04:51.753" starttime="20190403 10:04:47.673"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:04:51.753" starttime="20190403 10:04:47.672"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>setRequired.png</arg>
+</arguments>
+<msg timestamp="20190403 10:04:54.174" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/setRequired.png"&gt;&lt;img src="screenshots/setRequired.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190403 10:04:54.175" starttime="20190403 10:04:51.754"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:04:54.175" starttime="20190403 10:04:43.555"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:04:54.175" starttime="20190403 10:04:43.554"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:04:54.175" starttime="20190403 10:04:25.085"></status>
+</kw>
+<kw name="Add Text Field" library="resource">
+<arguments>
+<arg>State</arg>
+<arg>""</arg>
+<arg>"True"</arg>
+</arguments>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>id=button-add-field-textfield</arg>
+</arguments>
+<msg timestamp="20190403 10:04:54.176" level="INFO">Clicking link 'id=button-add-field-textfield'.</msg>
+<status status="PASS" endtime="20190403 10:05:00.424" starttime="20190403 10:04:54.176"></status>
+</kw>
+<kw name="Input Field Name By Label" library="resource">
+<arguments>
+<arg>"Enter Field Name"</arg>
+<arg>${fieldname}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@aria-label=${fieldlabel}]</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 10:05:00.425" level="INFO">Typing text 'State' into text field '//input[@aria-label="Enter Field Name"]'.</msg>
+<status status="PASS" endtime="20190403 10:05:06.533" starttime="20190403 10:05:00.425"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:05:06.533" starttime="20190403 10:05:00.424"></status>
+</kw>
+<kw name="Input Field Name By Label" library="resource">
+<arguments>
+<arg>"Enter Field Help Text"</arg>
+<arg>${fieldhelptext}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@aria-label=${fieldlabel}]</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 10:05:06.535" level="INFO">Typing text '""' into text field '//input[@aria-label="Enter Field Help Text"]'.</msg>
+<status status="PASS" endtime="20190403 10:05:12.629" starttime="20190403 10:05:06.534"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:05:12.630" starttime="20190403 10:05:06.534"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${is_required} == 'True'</arg>
+<arg>Set Text Field Required</arg>
+</arguments>
+<kw name="Set Text Field Required" library="resource">
+<kw name="Select Tab" library="resource">
+<arguments>
+<arg>"required-tab"</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[contains(@class, ${tabname})]</arg>
+</arguments>
+<msg timestamp="20190403 10:05:12.632" level="INFO">Clicking element '//div[contains(@class, "required-tab")]'.</msg>
+<status status="PASS" endtime="20190403 10:05:16.729" starttime="20190403 10:05:12.632"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:05:16.729" starttime="20190403 10:05:12.631"></status>
+</kw>
+<kw name="Select Range" library="resource">
+<arguments>
+<arg>"date-range"</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[contains(@class, ${tabname})]</arg>
+</arguments>
+<msg timestamp="20190403 10:05:16.730" level="INFO">Clicking element '//div[contains(@class, "date-range")]'.</msg>
+<status status="PASS" endtime="20190403 10:05:20.804" starttime="20190403 10:05:16.730"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:05:20.805" starttime="20190403 10:05:16.729"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>setRequired.png</arg>
+</arguments>
+<msg timestamp="20190403 10:05:23.232" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/setRequired.png"&gt;&lt;img src="screenshots/setRequired.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190403 10:05:23.233" starttime="20190403 10:05:20.805"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:05:23.233" starttime="20190403 10:05:12.631"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:05:23.233" starttime="20190403 10:05:12.630"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:05:23.233" starttime="20190403 10:04:54.175"></status>
+</kw>
+<kw name="Add Text Field" library="resource">
+<arguments>
+<arg>Zip Code</arg>
+<arg>"5-digit zip code in US"</arg>
+<arg>"True"</arg>
+</arguments>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>id=button-add-field-textfield</arg>
+</arguments>
+<msg timestamp="20190403 10:05:23.234" level="INFO">Clicking link 'id=button-add-field-textfield'.</msg>
+<status status="PASS" endtime="20190403 10:05:29.477" starttime="20190403 10:05:23.234"></status>
+</kw>
+<kw name="Input Field Name By Label" library="resource">
+<arguments>
+<arg>"Enter Field Name"</arg>
+<arg>${fieldname}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@aria-label=${fieldlabel}]</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 10:05:29.478" level="INFO">Typing text 'Zip Code' into text field '//input[@aria-label="Enter Field Name"]'.</msg>
+<status status="PASS" endtime="20190403 10:05:35.608" starttime="20190403 10:05:29.478"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:05:35.608" starttime="20190403 10:05:29.477"></status>
+</kw>
+<kw name="Input Field Name By Label" library="resource">
+<arguments>
+<arg>"Enter Field Help Text"</arg>
+<arg>${fieldhelptext}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@aria-label=${fieldlabel}]</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 10:05:35.609" level="INFO">Typing text '"5-digit zip code in US"' into text field '//input[@aria-label="Enter Field Help Text"]'.</msg>
+<status status="PASS" endtime="20190403 10:05:41.776" starttime="20190403 10:05:35.609"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:05:41.777" starttime="20190403 10:05:35.608"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${is_required} == 'True'</arg>
+<arg>Set Text Field Required</arg>
+</arguments>
+<kw name="Set Text Field Required" library="resource">
+<kw name="Select Tab" library="resource">
+<arguments>
+<arg>"required-tab"</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[contains(@class, ${tabname})]</arg>
+</arguments>
+<msg timestamp="20190403 10:05:41.779" level="INFO">Clicking element '//div[contains(@class, "required-tab")]'.</msg>
+<status status="PASS" endtime="20190403 10:05:45.884" starttime="20190403 10:05:41.779"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:05:45.884" starttime="20190403 10:05:41.778"></status>
+</kw>
+<kw name="Select Range" library="resource">
+<arguments>
+<arg>"date-range"</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[contains(@class, ${tabname})]</arg>
+</arguments>
+<msg timestamp="20190403 10:05:45.886" level="INFO">Clicking element '//div[contains(@class, "date-range")]'.</msg>
+<status status="PASS" endtime="20190403 10:05:49.967" starttime="20190403 10:05:45.885"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:05:49.967" starttime="20190403 10:05:45.884"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>setRequired.png</arg>
+</arguments>
+<msg timestamp="20190403 10:05:52.384" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/setRequired.png"&gt;&lt;img src="screenshots/setRequired.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190403 10:05:52.385" starttime="20190403 10:05:49.968"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:05:52.385" starttime="20190403 10:05:41.778"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:05:52.386" starttime="20190403 10:05:41.777"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:05:52.386" starttime="20190403 10:05:23.233"></status>
+</kw>
+<kw name="Click Save Button" library="resource">
+<arguments>
+<arg>button-save-element</arg>
+</arguments>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${savebuttonid}</arg>
+</arguments>
+<msg timestamp="20190403 10:05:52.388" level="INFO">Clicking button 'button-save-element'.</msg>
+<status status="PASS" endtime="20190403 10:06:02.733" starttime="20190403 10:05:52.387"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:06:02.733" starttime="20190403 10:05:52.387"></status>
+</kw>
+<kw name="Go Back to CEDAR Workspace" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//i[contains(@class, back-arrow)]</arg>
+</arguments>
+<msg timestamp="20190403 10:06:02.734" level="INFO">Clicking element '//i[contains(@class, back-arrow)]'.</msg>
+<status status="PASS" endtime="20190403 10:06:06.943" starttime="20190403 10:06:02.734"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:06:06.944" starttime="20190403 10:06:02.733"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:06:06.944" critical="yes" starttime="20190403 10:02:26.430"></status>
+</test>
+<test id="s1-s1-t3" name="Create New Template">
+<kw type="setup" name="Set Screenshot Directory" library="Selenium2Library">
+<doc>Sets the directory for captured screenshots.</doc>
+<arguments>
+<arg>screenshots/</arg>
+</arguments>
+<status status="PASS" endtime="20190403 10:06:06.946" starttime="20190403 10:06:06.946"></status>
+</kw>
+<kw name="Click New Button" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>button-create</arg>
+</arguments>
+<msg timestamp="20190403 10:06:06.947" level="INFO">Clicking button 'button-create'.</msg>
+<status status="PASS" endtime="20190403 10:06:17.046" starttime="20190403 10:06:06.947"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:06:17.046" starttime="20190403 10:06:06.947"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>myworkspace.png</arg>
+</arguments>
+<msg timestamp="20190403 10:06:19.480" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/myworkspace.png"&gt;&lt;img src="screenshots/myworkspace.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190403 10:06:19.481" starttime="20190403 10:06:17.047"></status>
 </kw>
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>id=button-create-template</arg>
 </arguments>
-<msg timestamp="20190403 01:49:41.826" level="INFO">Clicking link 'id=button-create-template'.</msg>
-<status status="PASS" endtime="20190403 01:49:47.901" starttime="20190403 01:49:41.826"></status>
+<msg timestamp="20190403 10:06:19.481" level="INFO">Clicking link 'id=button-create-template'.</msg>
+<status status="PASS" endtime="20190403 10:06:25.554" starttime="20190403 10:06:19.481"></status>
 </kw>
 <kw name="Input Field Name By ID" library="resource">
 <arguments>
@@ -141,10 +810,10 @@
 <arg>id=${fieldname}</arg>
 <arg>${fieldvalue}</arg>
 </arguments>
-<msg timestamp="20190403 01:49:47.903" level="INFO">Typing text 'Demonstration Template' into text field 'id=template-name'.</msg>
-<status status="PASS" endtime="20190403 01:49:54.126" starttime="20190403 01:49:47.902"></status>
+<msg timestamp="20190403 10:06:25.555" level="INFO">Typing text 'Demonstration Template' into text field 'id=template-name'.</msg>
+<status status="PASS" endtime="20190403 10:06:31.774" starttime="20190403 10:06:25.555"></status>
 </kw>
-<status status="PASS" endtime="20190403 01:49:54.126" starttime="20190403 01:49:47.902"></status>
+<status status="PASS" endtime="20190403 10:06:31.774" starttime="20190403 10:06:25.554"></status>
 </kw>
 <kw name="Input Field Name By ID" library="resource">
 <arguments>
@@ -157,10 +826,10 @@
 <arg>id=${fieldname}</arg>
 <arg>${fieldvalue}</arg>
 </arguments>
-<msg timestamp="20190403 01:49:54.128" level="INFO">Typing text 'demo-template' into text field 'id=template-identifier'.</msg>
-<status status="PASS" endtime="20190403 01:50:00.275" starttime="20190403 01:49:54.128"></status>
+<msg timestamp="20190403 10:06:31.775" level="INFO">Typing text 'demo-template' into text field 'id=template-identifier'.</msg>
+<status status="PASS" endtime="20190403 10:06:37.947" starttime="20190403 10:06:31.775"></status>
 </kw>
-<status status="PASS" endtime="20190403 01:50:00.276" starttime="20190403 01:49:54.127"></status>
+<status status="PASS" endtime="20190403 10:06:37.947" starttime="20190403 10:06:31.774"></status>
 </kw>
 <kw name="Input Field Name By ID" library="resource">
 <arguments>
@@ -173,31 +842,37 @@
 <arg>id=${fieldname}</arg>
 <arg>${fieldvalue}</arg>
 </arguments>
-<msg timestamp="20190403 01:50:00.277" level="INFO">Typing text '"A demo template to show automation"' into text field 'id=template-description'.</msg>
-<status status="PASS" endtime="20190403 01:50:06.529" starttime="20190403 01:50:00.277"></status>
+<msg timestamp="20190403 10:06:37.949" level="INFO">Typing text '"A demo template to show automation"' into text field 'id=template-description'.</msg>
+<status status="PASS" endtime="20190403 10:06:44.184" starttime="20190403 10:06:37.948"></status>
 </kw>
-<status status="PASS" endtime="20190403 01:50:06.529" starttime="20190403 01:50:00.276"></status>
+<status status="PASS" endtime="20190403 10:06:44.184" starttime="20190403 10:06:37.948"></status>
 </kw>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
 <arguments>
 <arg>addTemplatename.png</arg>
 </arguments>
-<msg timestamp="20190403 01:50:08.967" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="addTemplatename.png"&gt;&lt;img src="addTemplatename.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20190403 01:50:08.967" starttime="20190403 01:50:06.529"></status>
+<msg timestamp="20190403 10:06:46.617" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/addTemplatename.png"&gt;&lt;img src="screenshots/addTemplatename.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190403 10:06:46.618" starttime="20190403 10:06:44.185"></status>
 </kw>
+<kw name="Add Text Field" library="resource">
+<arguments>
+<arg>Type of Injury</arg>
+<arg>Type of injury being identified</arg>
+<arg>"True"</arg>
+</arguments>
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
 <arg>id=button-add-field-textfield</arg>
 </arguments>
-<msg timestamp="20190403 01:50:08.968" level="INFO">Clicking link 'id=button-add-field-textfield'.</msg>
-<status status="PASS" endtime="20190403 01:50:15.056" starttime="20190403 01:50:08.968"></status>
+<msg timestamp="20190403 10:06:46.619" level="INFO">Clicking link 'id=button-add-field-textfield'.</msg>
+<status status="PASS" endtime="20190403 10:06:52.760" starttime="20190403 10:06:46.619"></status>
 </kw>
 <kw name="Input Field Name By Label" library="resource">
 <arguments>
 <arg>"Enter Field Name"</arg>
-<arg>Type of Injury</arg>
+<arg>${fieldname}</arg>
 </arguments>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -205,11 +880,34 @@
 <arg>//input[@aria-label=${fieldlabel}]</arg>
 <arg>${fieldvalue}</arg>
 </arguments>
-<msg timestamp="20190403 01:50:15.057" level="INFO">Typing text 'Type of Injury' into text field '//input[@aria-label="Enter Field Name"]'.</msg>
-<status status="PASS" endtime="20190403 01:50:21.173" starttime="20190403 01:50:15.057"></status>
+<msg timestamp="20190403 10:06:52.761" level="INFO">Typing text 'Type of Injury' into text field '//input[@aria-label="Enter Field Name"]'.</msg>
+<status status="PASS" endtime="20190403 10:06:58.886" starttime="20190403 10:06:52.761"></status>
 </kw>
-<status status="PASS" endtime="20190403 01:50:21.173" starttime="20190403 01:50:15.056"></status>
+<status status="PASS" endtime="20190403 10:06:58.886" starttime="20190403 10:06:52.760"></status>
 </kw>
+<kw name="Input Field Name By Label" library="resource">
+<arguments>
+<arg>"Enter Field Help Text"</arg>
+<arg>${fieldhelptext}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@aria-label=${fieldlabel}]</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 10:06:58.887" level="INFO">Typing text 'Type of injury being identified' into text field '//input[@aria-label="Enter Field Help Text"]'.</msg>
+<status status="PASS" endtime="20190403 10:07:05.036" starttime="20190403 10:06:58.887"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:07:05.036" starttime="20190403 10:06:58.886"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${is_required} == 'True'</arg>
+<arg>Set Text Field Required</arg>
+</arguments>
+<kw name="Set Text Field Required" library="resource">
 <kw name="Select Tab" library="resource">
 <arguments>
 <arg>"required-tab"</arg>
@@ -219,10 +917,10 @@
 <arguments>
 <arg>//div[contains(@class, ${tabname})]</arg>
 </arguments>
-<msg timestamp="20190403 01:50:21.175" level="INFO">Clicking element '//div[contains(@class, "required-tab")]'.</msg>
-<status status="PASS" endtime="20190403 01:50:25.239" starttime="20190403 01:50:21.174"></status>
+<msg timestamp="20190403 10:07:05.041" level="INFO">Clicking element '//div[contains(@class, "required-tab")]'.</msg>
+<status status="PASS" endtime="20190403 10:07:09.104" starttime="20190403 10:07:05.041"></status>
 </kw>
-<status status="PASS" endtime="20190403 01:50:25.240" starttime="20190403 01:50:21.173"></status>
+<status status="PASS" endtime="20190403 10:07:09.104" starttime="20190403 10:07:05.038"></status>
 </kw>
 <kw name="Select Range" library="resource">
 <arguments>
@@ -233,18 +931,24 @@
 <arguments>
 <arg>//div[contains(@class, ${tabname})]</arg>
 </arguments>
-<msg timestamp="20190403 01:50:25.241" level="INFO">Clicking element '//div[contains(@class, "date-range")]'.</msg>
-<status status="PASS" endtime="20190403 01:50:29.304" starttime="20190403 01:50:25.241"></status>
+<msg timestamp="20190403 10:07:09.106" level="INFO">Clicking element '//div[contains(@class, "date-range")]'.</msg>
+<status status="PASS" endtime="20190403 10:07:13.167" starttime="20190403 10:07:09.105"></status>
 </kw>
-<status status="PASS" endtime="20190403 01:50:29.304" starttime="20190403 01:50:25.240"></status>
+<status status="PASS" endtime="20190403 10:07:13.167" starttime="20190403 10:07:09.105"></status>
 </kw>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
 <arguments>
 <arg>setRequired.png</arg>
 </arguments>
-<msg timestamp="20190403 01:50:31.726" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="setRequired.png"&gt;&lt;img src="setRequired.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20190403 01:50:31.726" starttime="20190403 01:50:29.305"></status>
+<msg timestamp="20190403 10:07:15.591" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/setRequired.png"&gt;&lt;img src="screenshots/setRequired.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190403 10:07:15.591" starttime="20190403 10:07:13.167"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:07:15.591" starttime="20190403 10:07:05.037"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:07:15.591" starttime="20190403 10:07:05.036"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:07:15.592" starttime="20190403 10:06:46.618"></status>
 </kw>
 <kw name="Select Tab" library="resource">
 <arguments>
@@ -255,10 +959,10 @@
 <arguments>
 <arg>//div[contains(@class, ${tabname})]</arg>
 </arguments>
-<msg timestamp="20190403 01:50:31.727" level="INFO">Clicking element '//div[contains(@class, "value-controlled-terms-tab")]'.</msg>
-<status status="PASS" endtime="20190403 01:50:35.789" starttime="20190403 01:50:31.727"></status>
+<msg timestamp="20190403 10:07:15.593" level="INFO">Clicking element '//div[contains(@class, "value-controlled-terms-tab")]'.</msg>
+<status status="PASS" endtime="20190403 10:07:19.663" starttime="20190403 10:07:15.592"></status>
 </kw>
-<status status="PASS" endtime="20190403 01:50:35.789" starttime="20190403 01:50:31.726"></status>
+<status status="PASS" endtime="20190403 10:07:19.663" starttime="20190403 10:07:15.592"></status>
 </kw>
 <kw name="Select Ontology Term" library="resource">
 <arguments>
@@ -274,11 +978,16 @@
 <arguments>
 <arg>//button[contains(@class, ${btnname})]</arg>
 </arguments>
-<msg timestamp="20190403 01:50:35.791" level="INFO">Clicking element '//button[contains(@class, "add")]'.</msg>
-<status status="PASS" endtime="20190403 01:50:39.878" starttime="20190403 01:50:35.791"></status>
+<msg timestamp="20190403 10:07:19.665" level="INFO">Clicking element '//button[contains(@class, "add")]'.</msg>
+<status status="PASS" endtime="20190403 10:07:23.781" starttime="20190403 10:07:19.665"></status>
 </kw>
-<status status="PASS" endtime="20190403 01:50:39.879" starttime="20190403 01:50:35.790"></status>
+<status status="PASS" endtime="20190403 10:07:23.781" starttime="20190403 10:07:19.664"></status>
 </kw>
+<kw name="Input Ontology Term" library="resource">
+<arguments>
+<arg>${ontosearchstring}</arg>
+<arg>${ontoterm}</arg>
+</arguments>
 <kw name="Input Field Name By ID" library="resource">
 <arguments>
 <arg>field-search-input</arg>
@@ -290,33 +999,43 @@
 <arg>id=${fieldname}</arg>
 <arg>${fieldvalue}</arg>
 </arguments>
-<msg timestamp="20190403 01:50:39.880" level="INFO">Typing text '"Injury"' into text field 'id=field-search-input'.</msg>
-<status status="PASS" endtime="20190403 01:50:45.994" starttime="20190403 01:50:39.880"></status>
+<msg timestamp="20190403 10:07:23.783" level="INFO">Typing text '"Injury"' into text field 'id=field-search-input'.</msg>
+<status status="PASS" endtime="20190403 10:07:29.925" starttime="20190403 10:07:23.783"></status>
 </kw>
-<status status="PASS" endtime="20190403 01:50:45.994" starttime="20190403 01:50:39.879"></status>
+<status status="PASS" endtime="20190403 10:07:29.925" starttime="20190403 10:07:23.782"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="Selenium2Library">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>${DELAY}</arg>
 </arguments>
-<status status="PASS" endtime="20190403 01:50:47.999" starttime="20190403 01:50:45.995"></status>
+<status status="PASS" endtime="20190403 10:07:31.934" starttime="20190403 10:07:29.925"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//td[contains(text(), ${ontoterm})]</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" endtime="20190403 10:07:33.963" starttime="20190403 10:07:31.934"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>//td[contains(text(), ${ontoterm})]</arg>
 </arguments>
-<msg timestamp="20190403 01:50:47.999" level="INFO">Clicking element '//td[contains(text(), "C3671")]'.</msg>
-<status status="PASS" endtime="20190403 01:50:52.128" starttime="20190403 01:50:47.999"></status>
+<msg timestamp="20190403 10:07:33.964" level="INFO">Clicking element '//td[contains(text(), "C3671")]'.</msg>
+<status status="PASS" endtime="20190403 10:07:38.088" starttime="20190403 10:07:33.963"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:07:38.088" starttime="20190403 10:07:23.781"></status>
 </kw>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
 <arguments>
 <arg>selectTerm.png</arg>
 </arguments>
-<msg timestamp="20190403 01:50:54.570" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selectTerm.png"&gt;&lt;img src="selectTerm.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20190403 01:50:54.570" starttime="20190403 01:50:52.129"></status>
+<msg timestamp="20190403 10:07:40.532" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/selectTerm.png"&gt;&lt;img src="screenshots/selectTerm.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190403 10:07:40.532" starttime="20190403 10:07:38.089"></status>
 </kw>
 <kw name="Click Button By Class" library="resource">
 <arguments>
@@ -327,20 +1046,20 @@
 <arguments>
 <arg>//button[contains(@class, ${btnname})]</arg>
 </arguments>
-<msg timestamp="20190403 01:50:54.571" level="INFO">Clicking element '//button[contains(@class, "btn-add-term")]'.</msg>
-<status status="PASS" endtime="20190403 01:50:58.666" starttime="20190403 01:50:54.571"></status>
+<msg timestamp="20190403 10:07:40.533" level="INFO">Clicking element '//button[contains(@class, "btn-add-term")]'.</msg>
+<status status="PASS" endtime="20190403 10:07:44.694" starttime="20190403 10:07:40.532"></status>
 </kw>
-<status status="PASS" endtime="20190403 01:50:58.667" starttime="20190403 01:50:54.570"></status>
+<status status="PASS" endtime="20190403 10:07:44.694" starttime="20190403 10:07:40.532"></status>
 </kw>
-<status status="PASS" endtime="20190403 01:50:58.667" starttime="20190403 01:50:35.790"></status>
+<status status="PASS" endtime="20190403 10:07:44.694" starttime="20190403 10:07:19.663"></status>
 </kw>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
 <arguments>
 <arg>addOntologyTerm.png</arg>
 </arguments>
-<msg timestamp="20190403 01:51:01.074" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="addOntologyTerm.png"&gt;&lt;img src="addOntologyTerm.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20190403 01:51:01.074" starttime="20190403 01:50:58.667"></status>
+<msg timestamp="20190403 10:07:47.109" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/addOntologyTerm.png"&gt;&lt;img src="screenshots/addOntologyTerm.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190403 10:07:47.109" starttime="20190403 10:07:44.695"></status>
 </kw>
 <kw name="Select Ontology Term" library="resource">
 <arguments>
@@ -356,11 +1075,16 @@
 <arguments>
 <arg>//button[contains(@class, ${btnname})]</arg>
 </arguments>
-<msg timestamp="20190403 01:51:01.076" level="INFO">Clicking element '//button[contains(@class, "add")]'.</msg>
-<status status="PASS" endtime="20190403 01:51:05.173" starttime="20190403 01:51:01.075"></status>
+<msg timestamp="20190403 10:07:47.111" level="INFO">Clicking element '//button[contains(@class, "add")]'.</msg>
+<status status="PASS" endtime="20190403 10:07:51.208" starttime="20190403 10:07:47.111"></status>
 </kw>
-<status status="PASS" endtime="20190403 01:51:05.173" starttime="20190403 01:51:01.075"></status>
+<status status="PASS" endtime="20190403 10:07:51.208" starttime="20190403 10:07:47.110"></status>
 </kw>
+<kw name="Input Ontology Term" library="resource">
+<arguments>
+<arg>${ontosearchstring}</arg>
+<arg>${ontoterm}</arg>
+</arguments>
 <kw name="Input Field Name By ID" library="resource">
 <arguments>
 <arg>field-search-input</arg>
@@ -372,115 +1096,303 @@
 <arg>id=${fieldname}</arg>
 <arg>${fieldvalue}</arg>
 </arguments>
-<msg timestamp="20190403 01:51:05.175" level="INFO">Typing text '"Chemical Exposure"' into text field 'id=field-search-input'.</msg>
-<status status="PASS" endtime="20190403 01:51:11.329" starttime="20190403 01:51:05.174"></status>
+<msg timestamp="20190403 10:07:51.211" level="INFO">Typing text '"Chemical Exposure"' into text field 'id=field-search-input'.</msg>
+<status status="PASS" endtime="20190403 10:07:57.365" starttime="20190403 10:07:51.210"></status>
 </kw>
-<status status="PASS" endtime="20190403 01:51:11.330" starttime="20190403 01:51:05.173"></status>
+<status status="PASS" endtime="20190403 10:07:57.365" starttime="20190403 10:07:51.209"></status>
 </kw>
 <kw name="Set Selenium Implicit Wait" library="Selenium2Library">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>${DELAY}</arg>
 </arguments>
-<status status="PASS" endtime="20190403 01:51:13.335" starttime="20190403 01:51:11.330"></status>
+<status status="PASS" endtime="20190403 10:07:59.378" starttime="20190403 10:07:57.366"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//td[contains(text(), ${ontoterm})]</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" endtime="20190403 10:08:09.876" starttime="20190403 10:07:59.378"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>//td[contains(text(), ${ontoterm})]</arg>
 </arguments>
-<msg timestamp="20190403 01:51:13.336" level="INFO">Clicking element '//td[contains(text(), "C36290")]'.</msg>
+<msg timestamp="20190403 10:08:09.877" level="INFO">Clicking element '//td[contains(text(), "C36290")]'.</msg>
+<status status="PASS" endtime="20190403 10:08:13.995" starttime="20190403 10:08:09.877"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:08:13.995" starttime="20190403 10:07:51.209"></status>
+</kw>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20190403 01:51:19.835" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20190403 01:51:19.835" starttime="20190403 01:51:17.361"></status>
+<arguments>
+<arg>selectTerm.png</arg>
+</arguments>
+<msg timestamp="20190403 10:08:16.466" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/selectTerm.png"&gt;&lt;img src="screenshots/selectTerm.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190403 10:08:16.466" starttime="20190403 10:08:13.996"></status>
 </kw>
-<msg timestamp="20190403 01:51:19.838" level="FAIL">Element with locator '//td[contains(text(), "C36290")]' not found.</msg>
-<status status="FAIL" endtime="20190403 01:51:19.838" starttime="20190403 01:51:13.335"></status>
+<kw name="Click Button By Class" library="resource">
+<arguments>
+<arg>"btn-add-term"</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[contains(@class, ${btnname})]</arg>
+</arguments>
+<msg timestamp="20190403 10:08:16.467" level="INFO">Clicking element '//button[contains(@class, "btn-add-term")]'.</msg>
+<status status="PASS" endtime="20190403 10:08:20.566" starttime="20190403 10:08:16.467"></status>
 </kw>
-<status status="FAIL" endtime="20190403 01:51:19.838" starttime="20190403 01:51:01.075"></status>
+<status status="PASS" endtime="20190403 10:08:20.567" starttime="20190403 10:08:16.467"></status>
 </kw>
-<status status="FAIL" endtime="20190403 01:51:19.839" critical="yes" starttime="20190403 01:49:28.717">Element with locator '//td[contains(text(), "C36290")]' not found.</status>
+<status status="PASS" endtime="20190403 10:08:20.567" starttime="20190403 10:07:47.109"></status>
+</kw>
+<kw name="Add Text Field" library="resource">
+<arguments>
+<arg>Anatomic Location</arg>
+<arg>Location of the item being identified</arg>
+<arg>"False"</arg>
+</arguments>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>id=button-add-field-textfield</arg>
+</arguments>
+<msg timestamp="20190403 10:08:20.568" level="INFO">Clicking link 'id=button-add-field-textfield'.</msg>
+<status status="PASS" endtime="20190403 10:08:26.779" starttime="20190403 10:08:20.568"></status>
+</kw>
+<kw name="Input Field Name By Label" library="resource">
+<arguments>
+<arg>"Enter Field Name"</arg>
+<arg>${fieldname}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@aria-label=${fieldlabel}]</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 10:08:26.781" level="INFO">Typing text 'Anatomic Location' into text field '//input[@aria-label="Enter Field Name"]'.</msg>
+<status status="PASS" endtime="20190403 10:08:32.904" starttime="20190403 10:08:26.781"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:08:32.905" starttime="20190403 10:08:26.780"></status>
+</kw>
+<kw name="Input Field Name By Label" library="resource">
+<arguments>
+<arg>"Enter Field Help Text"</arg>
+<arg>${fieldhelptext}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@aria-label=${fieldlabel}]</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 10:08:32.907" level="INFO">Typing text 'Location of the item being identified' into text field '//input[@aria-label="Enter Field Help Text"]'.</msg>
+<status status="PASS" endtime="20190403 10:08:39.077" starttime="20190403 10:08:32.906"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:08:39.077" starttime="20190403 10:08:32.905"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${is_required} == 'True'</arg>
+<arg>Set Text Field Required</arg>
+</arguments>
+<status status="PASS" endtime="20190403 10:08:39.078" starttime="20190403 10:08:39.077"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:08:39.078" starttime="20190403 10:08:20.567"></status>
+</kw>
+<kw name="Select Tab" library="resource">
+<arguments>
+<arg>"value-controlled-terms-tab"</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[contains(@class, ${tabname})]</arg>
+</arguments>
+<msg timestamp="20190403 10:08:39.080" level="INFO">Clicking element '//div[contains(@class, "value-controlled-terms-tab")]'.</msg>
+<status status="PASS" endtime="20190403 10:08:43.171" starttime="20190403 10:08:39.079"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:08:43.171" starttime="20190403 10:08:39.079"></status>
+</kw>
+<kw name="Select Ontology Term" library="resource">
+<arguments>
+<arg>"anatomical structure"</arg>
+<arg>"RID13390"</arg>
+</arguments>
+<kw name="Click Button By Class" library="resource">
+<arguments>
+<arg>"add"</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[contains(@class, ${btnname})]</arg>
+</arguments>
+<msg timestamp="20190403 10:08:43.173" level="INFO">Clicking element '//button[contains(@class, "add")]'.</msg>
+<status status="PASS" endtime="20190403 10:08:47.278" starttime="20190403 10:08:43.173"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:08:47.278" starttime="20190403 10:08:43.172"></status>
+</kw>
+<kw name="Input Ontology Term" library="resource">
+<arguments>
+<arg>${ontosearchstring}</arg>
+<arg>${ontoterm}</arg>
+</arguments>
+<kw name="Input Field Name By ID" library="resource">
+<arguments>
+<arg>field-search-input</arg>
+<arg>${ontosearchstring}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${fieldname}</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 10:08:47.280" level="INFO">Typing text '"anatomical structure"' into text field 'id=field-search-input'.</msg>
+<status status="PASS" endtime="20190403 10:08:53.434" starttime="20190403 10:08:47.280"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:08:53.435" starttime="20190403 10:08:47.279"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20190403 10:08:55.437" starttime="20190403 10:08:53.435"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>//td[contains(text(), ${ontoterm})]</arg>
+<arg>10s</arg>
+</arguments>
+<status status="PASS" endtime="20190403 10:09:06.551" starttime="20190403 10:08:55.437"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//td[contains(text(), ${ontoterm})]</arg>
+</arguments>
+<msg timestamp="20190403 10:09:06.552" level="INFO">Clicking element '//td[contains(text(), "RID13390")]'.</msg>
+<status status="PASS" endtime="20190403 10:09:10.676" starttime="20190403 10:09:06.552"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:09:10.676" starttime="20190403 10:08:47.278"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>selectTerm.png</arg>
+</arguments>
+<msg timestamp="20190403 10:09:13.132" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/selectTerm.png"&gt;&lt;img src="screenshots/selectTerm.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190403 10:09:13.132" starttime="20190403 10:09:10.677"></status>
+</kw>
+<kw name="Click Button By Class" library="resource">
+<arguments>
+<arg>"btn-add-term"</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[contains(@class, ${btnname})]</arg>
+</arguments>
+<msg timestamp="20190403 10:09:13.133" level="INFO">Clicking element '//button[contains(@class, "btn-add-term")]'.</msg>
+<status status="PASS" endtime="20190403 10:09:17.285" starttime="20190403 10:09:13.133"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:09:17.285" starttime="20190403 10:09:13.132"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:09:17.286" starttime="20190403 10:08:43.171"></status>
+</kw>
+<kw name="Click Save Button" library="resource">
+<arguments>
+<arg>button-save-template</arg>
+</arguments>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${savebuttonid}</arg>
+</arguments>
+<msg timestamp="20190403 10:09:17.286" level="INFO">Clicking button 'button-save-template'.</msg>
+<status status="PASS" endtime="20190403 10:09:27.517" starttime="20190403 10:09:17.286"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:09:27.517" starttime="20190403 10:09:17.286"></status>
+</kw>
+<kw name="Go Back to CEDAR Workspace" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//i[contains(@class, back-arrow)]</arg>
+</arguments>
+<msg timestamp="20190403 10:09:27.518" level="INFO">Clicking element '//i[contains(@class, back-arrow)]'.</msg>
+<status status="PASS" endtime="20190403 10:09:31.704" starttime="20190403 10:09:27.518"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:09:31.704" starttime="20190403 10:09:27.518"></status>
+</kw>
+<status status="PASS" endtime="20190403 10:09:31.704" critical="yes" starttime="20190403 10:06:06.945"></status>
 </test>
-<test id="s1-s1-t3" name="Create New Field">
+<test id="s1-s1-t4" name="Create New Field">
+<kw type="setup" name="Set Screenshot Directory" library="Selenium2Library">
+<doc>Sets the directory for captured screenshots.</doc>
+<arguments>
+<arg>screenshots/</arg>
+</arguments>
+<status status="PASS" endtime="20190403 10:09:31.707" starttime="20190403 10:09:31.706"></status>
+</kw>
 <kw name="Click New Button" library="resource">
 <kw name="Click Button" library="Selenium2Library">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
 <arg>button-create</arg>
 </arguments>
-<msg timestamp="20190403 01:51:19.840" level="INFO">Clicking button 'button-create'.</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20190403 01:51:32.340" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20190403 01:51:32.341" starttime="20190403 01:51:29.896"></status>
+<msg timestamp="20190403 10:09:31.708" level="INFO">Clicking button 'button-create'.</msg>
+<status status="PASS" endtime="20190403 10:09:41.794" starttime="20190403 10:09:31.707"></status>
 </kw>
-<msg timestamp="20190403 01:51:32.341" level="FAIL">Button with locator 'button-create' not found.</msg>
-<status status="FAIL" endtime="20190403 01:51:32.341" starttime="20190403 01:51:19.840"></status>
+<status status="PASS" endtime="20190403 10:09:41.794" starttime="20190403 10:09:31.707"></status>
 </kw>
-<status status="FAIL" endtime="20190403 01:51:32.341" starttime="20190403 01:51:19.840"></status>
-</kw>
-<status status="FAIL" endtime="20190403 01:51:32.342" critical="yes" starttime="20190403 01:51:19.839">Button with locator 'button-create' not found.</status>
-</test>
-<test id="s1-s1-t4" name="Create New Element">
-<kw name="Click New Button" library="resource">
-<kw name="Click Button" library="Selenium2Library">
-<doc>Clicks button identified by ``locator``.</doc>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
-<arg>button-create</arg>
+<arg>id=button-create-field</arg>
 </arguments>
-<msg timestamp="20190403 01:51:32.343" level="INFO">Clicking button 'button-create'.</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20190403 01:51:38.386" level="FAIL">UnexpectedAlertPresentException: Alert Text: None
-Message: unexpected alert open: {Alert text : }
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Mac OS X 10.14.0 x86_64)
-</msg>
-<status status="FAIL" endtime="20190403 01:51:38.386" starttime="20190403 01:51:38.382"></status>
+<msg timestamp="20190403 10:09:41.795" level="INFO">Clicking link 'id=button-create-field'.</msg>
+<status status="PASS" endtime="20190403 10:09:47.867" starttime="20190403 10:09:41.795"></status>
 </kw>
-<msg timestamp="20190403 01:51:38.386" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: UnexpectedAlertPresentException: Alert Text: None
-Message: unexpected alert open: {Alert text : }
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Mac OS X 10.14.0 x86_64)
-</msg>
-<msg timestamp="20190403 01:51:38.387" level="FAIL">UnexpectedAlertPresentException: Alert Text: None
-Message: unexpected alert open: {Alert text : }
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Mac OS X 10.14.0 x86_64)
-</msg>
-<status status="FAIL" endtime="20190403 01:51:38.387" starttime="20190403 01:51:32.343"></status>
+<kw name="Go Back to CEDAR Workspace" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//i[contains(@class, back-arrow)]</arg>
+</arguments>
+<msg timestamp="20190403 10:09:47.869" level="INFO">Clicking element '//i[contains(@class, back-arrow)]'.</msg>
+<status status="PASS" endtime="20190403 10:09:51.937" starttime="20190403 10:09:47.868"></status>
 </kw>
-<status status="FAIL" endtime="20190403 01:51:38.387" starttime="20190403 01:51:32.343"></status>
+<status status="PASS" endtime="20190403 10:09:51.937" starttime="20190403 10:09:47.868"></status>
 </kw>
-<status status="FAIL" endtime="20190403 01:51:38.387" critical="yes" starttime="20190403 01:51:32.342">UnexpectedAlertPresentException: Alert Text: None
-Message: unexpected alert open: {Alert text : }
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Mac OS X 10.14.0 x86_64)
-</status>
+<status status="PASS" endtime="20190403 10:09:51.937" critical="yes" starttime="20190403 10:09:31.705"></status>
 </test>
 <doc>A test suite with a single test for valid login.</doc>
-<status status="FAIL" endtime="20190403 01:51:38.388" starttime="20190403 01:49:16.814"></status>
+<status status="PASS" endtime="20190403 10:09:51.939" starttime="20190403 10:02:15.739"></status>
 </suite>
-<status status="FAIL" endtime="20190403 01:51:38.392" starttime="20190403 01:49:16.792"></status>
+<status status="PASS" endtime="20190403 10:09:51.944" starttime="20190403 10:02:15.717"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="3" pass="1">Critical Tests</stat>
-<stat fail="3" pass="1">All Tests</stat>
+<stat fail="0" pass="4">Critical Tests</stat>
+<stat fail="0" pass="4">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="3" id="s1" name="Automate" pass="1">Automate</stat>
-<stat fail="3" id="s1-s1" name="Valid Login" pass="1">Automate.Valid Login</stat>
+<stat fail="0" id="s1" name="Automate" pass="4">Automate</stat>
+<stat fail="0" id="s1-s1" name="Valid Login" pass="4">Automate.Valid Login</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20190403 01:51:38.386" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: UnexpectedAlertPresentException: Alert Text: None
-Message: unexpected alert open: {Alert text : }
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Mac OS X 10.14.0 x86_64)
-</msg>
 </errors>
 </robot>

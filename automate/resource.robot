@@ -35,10 +35,13 @@ Input Password
 Submit Credentials
     Click Button    login
 
-Projects Page Should Be Open
+CEDAR Workspace Should Be Open
     Title Should Be    Project Cedar
     Set Selenium Speed    ${DELAY}
     Set Selenium Implicit Wait    ${WAITTIME}
+
+Go Back to CEDAR Workspace
+    Click Element    //i[contains(@class, back-arrow)]
 
 Click New Button
     Click Button    button-create
@@ -63,14 +66,38 @@ Click Button By Class
     [Arguments]    ${btnname}
     Click Element    //button[contains(@class, ${btnname})]
 
-Select Ontology Term
+Input Ontology Term
     [Arguments]    ${ontosearchstring}    ${ontoterm}
-    Click Button By Class  "add"
     Input Field Name By ID  field-search-input  ${ontosearchstring}
     Set Selenium Implicit Wait    ${DELAY}
+    Wait Until Page Contains Element    //td[contains(text(), ${ontoterm})]    10s
     Click Element    //td[contains(text(), ${ontoterm})]
+
+Add CEDAR Controlled Term
+    [Arguments]    ${ontosearchstring}    ${ontoterm}
+    Click Button By Class  show-type
+    Input Ontology Term    ${ontosearchstring}    ${ontoterm}
+    Click Button By Class    "btn-add-term"
+
+Select Ontology Term
+    #Incase this needs to be modified to select term instead of Branch ..
+    [Arguments]    ${ontosearchstring}    ${ontoterm}
+    Click Button By Class  "add"
+    Input Ontology Term    ${ontosearchstring}    ${ontoterm}
     Capture Page Screenshot    selectTerm.png
     Click Button By Class    "btn-add-term"
+
+Set Text Field Required
+    Select Tab  "required-tab"
+    Select Range  "date-range"
+    Capture Page Screenshot    setRequired.png
+
+Add Text Field
+    [Arguments]    ${fieldname}    ${fieldhelptext}    ${is_required}
+    Click Link  id=button-add-field-textfield
+    Input Field Name By Label  "Enter Field Name"  ${fieldname}
+    Input Field Name By Label  "Enter Field Help Text"  ${fieldhelptext}
+    Run Keyword If    ${is_required} == 'True'    Set Text Field Required
 
 Click Save Button
     [Arguments]    ${savebuttonid}

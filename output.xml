@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20190401 09:13:05.908" generator="Robot 3.1.1 (Python 2.7.10 on darwin)">
+<robot rpa="false" generated="20190403 01:49:16.791" generator="Robot 3.1.1 (Python 2.7.10 on darwin)">
 <suite source="/Users/mkamdar/cedar-screenshots-robot/automate" id="s1" name="Automate">
 <suite source="/Users/mkamdar/cedar-screenshots-robot/automate/valid_login.robot" id="s1-s1" name="Valid Login">
 <test id="s1-s1-t1" name="Valid Login">
@@ -10,31 +10,21 @@
 <arg>${LOGIN URL}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20190401 09:13:06.141" level="INFO">Opening browser 'Chrome' to base url 'https://cedar.metadatacenter.org'.</msg>
-<status status="PASS" endtime="20190401 09:13:10.508" starttime="20190401 09:13:06.141"></status>
+<msg timestamp="20190403 01:49:17.020" level="INFO">Opening browser 'Chrome' to base url 'https://cedar.metadatacenter.org'.</msg>
+<status status="PASS" endtime="20190403 01:49:21.329" starttime="20190403 01:49:17.020"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20190401 09:13:12.043" starttime="20190401 09:13:10.509"></status>
+<status status="PASS" endtime="20190403 01:49:23.157" starttime="20190403 01:49:21.330"></status>
 </kw>
 <kw name="Set Selenium Speed" library="Selenium2Library">
 <doc>Sets the delay that is waited after each Selenium command.</doc>
 <arguments>
-<arg>${DELAY}</arg>
+<arg>${MIN_DELAY}</arg>
 </arguments>
-<status status="PASS" endtime="20190401 09:13:12.044" starttime="20190401 09:13:12.043"></status>
+<status status="PASS" endtime="20190403 01:49:23.158" starttime="20190403 01:49:23.157"></status>
 </kw>
-<kw name="Login Page Should Be Open" library="resource">
-<kw name="Set Selenium Speed" library="Selenium2Library">
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<arguments>
-<arg>${DELAY}</arg>
-</arguments>
-<status status="PASS" endtime="20190401 09:13:12.044" starttime="20190401 09:13:12.044"></status>
-</kw>
-<status status="PASS" endtime="20190401 09:13:12.045" starttime="20190401 09:13:12.044"></status>
-</kw>
-<status status="PASS" endtime="20190401 09:13:12.045" starttime="20190401 09:13:06.141"></status>
+<status status="PASS" endtime="20190403 01:49:23.158" starttime="20190403 01:49:17.019"></status>
 </kw>
 <kw name="Input Username" library="resource">
 <arguments>
@@ -46,10 +36,10 @@
 <arg>username</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20190401 09:13:12.045" level="INFO">Typing text 'thecedarteam@gmail.com' into text field 'username'.</msg>
-<status status="PASS" endtime="20190401 09:13:12.185" starttime="20190401 09:13:12.045"></status>
+<msg timestamp="20190403 01:49:23.159" level="INFO">Typing text 'thecedarteam@gmail.com' into text field 'username'.</msg>
+<status status="PASS" endtime="20190403 01:49:23.288" starttime="20190403 01:49:23.159"></status>
 </kw>
-<status status="PASS" endtime="20190401 09:13:12.185" starttime="20190401 09:13:12.045"></status>
+<status status="PASS" endtime="20190403 01:49:23.288" starttime="20190403 01:49:23.158"></status>
 </kw>
 <kw name="Input Password" library="resource">
 <arguments>
@@ -61,15 +51,18 @@
 <arg>password</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20190401 09:13:12.186" level="INFO">Typing text 'markmusen007' into text field 'password'.</msg>
-<status status="PASS" endtime="20190401 09:13:12.255" starttime="20190401 09:13:12.186"></status>
+<msg timestamp="20190403 01:49:23.289" level="INFO">Typing text 'markmusen007' into text field 'password'.</msg>
+<status status="PASS" endtime="20190403 01:49:23.358" starttime="20190403 01:49:23.288"></status>
 </kw>
-<status status="PASS" endtime="20190401 09:13:12.256" starttime="20190401 09:13:12.186"></status>
+<status status="PASS" endtime="20190403 01:49:23.358" starttime="20190403 01:49:23.288"></status>
 </kw>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20190401 09:13:12.738" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20190401 09:13:12.738" starttime="20190401 09:13:12.256"></status>
+<arguments>
+<arg>login.png</arg>
+</arguments>
+<msg timestamp="20190403 01:49:23.848" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="login.png"&gt;&lt;img src="login.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190403 01:49:23.848" starttime="20190403 01:49:23.358"></status>
 </kw>
 <kw name="Submit Credentials" library="resource">
 <kw name="Click Button" library="Selenium2Library">
@@ -77,10 +70,10 @@
 <arguments>
 <arg>login</arg>
 </arguments>
-<msg timestamp="20190401 09:13:12.739" level="INFO">Clicking button 'login'.</msg>
-<status status="PASS" endtime="20190401 09:13:13.175" starttime="20190401 09:13:12.739"></status>
+<msg timestamp="20190403 01:49:23.849" level="INFO">Clicking button 'login'.</msg>
+<status status="PASS" endtime="20190403 01:49:24.279" starttime="20190403 01:49:23.849"></status>
 </kw>
-<status status="PASS" endtime="20190401 09:13:13.175" starttime="20190401 09:13:12.739"></status>
+<status status="PASS" endtime="20190403 01:49:24.279" starttime="20190403 01:49:23.848"></status>
 </kw>
 <kw name="Projects Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="Selenium2Library">
@@ -88,41 +81,406 @@
 <arguments>
 <arg>Project Cedar</arg>
 </arguments>
-<msg timestamp="20190401 09:13:13.179" level="INFO">Page title is 'Project Cedar'.</msg>
-<status status="PASS" endtime="20190401 09:13:13.179" starttime="20190401 09:13:13.175"></status>
+<msg timestamp="20190403 01:49:24.284" level="INFO">Page title is 'Project Cedar'.</msg>
+<status status="PASS" endtime="20190403 01:49:24.284" starttime="20190403 01:49:24.280"></status>
 </kw>
 <kw name="Set Selenium Speed" library="Selenium2Library">
 <doc>Sets the delay that is waited after each Selenium command.</doc>
 <arguments>
 <arg>${DELAY}</arg>
 </arguments>
-<status status="PASS" endtime="20190401 09:13:13.180" starttime="20190401 09:13:13.179"></status>
+<status status="PASS" endtime="20190403 01:49:24.285" starttime="20190403 01:49:24.284"></status>
 </kw>
-<status status="PASS" endtime="20190401 09:13:13.180" starttime="20190401 09:13:13.175"></status>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>${WAITTIME}</arg>
+</arguments>
+<status status="PASS" endtime="20190403 01:49:26.289" starttime="20190403 01:49:24.285"></status>
 </kw>
-<kw type="teardown" name="Close Browser" library="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20190401 09:13:13.251" starttime="20190401 09:13:13.180"></status>
+<status status="PASS" endtime="20190403 01:49:26.289" starttime="20190403 01:49:24.280"></status>
 </kw>
-<status status="PASS" endtime="20190401 09:13:13.251" critical="yes" starttime="20190401 09:13:06.140"></status>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>myworkspace.png</arg>
+</arguments>
+<msg timestamp="20190403 01:49:28.715" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="myworkspace.png"&gt;&lt;img src="myworkspace.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190403 01:49:28.715" starttime="20190403 01:49:26.290"></status>
+</kw>
+<status status="PASS" endtime="20190403 01:49:28.715" critical="yes" starttime="20190403 01:49:17.019"></status>
+</test>
+<test id="s1-s1-t2" name="Create New Template">
+<kw name="Click New Button" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>button-create</arg>
+</arguments>
+<msg timestamp="20190403 01:49:28.718" level="INFO">Clicking button 'button-create'.</msg>
+<status status="PASS" endtime="20190403 01:49:41.825" starttime="20190403 01:49:28.718"></status>
+</kw>
+<status status="PASS" endtime="20190403 01:49:41.826" starttime="20190403 01:49:28.718"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>id=button-create-template</arg>
+</arguments>
+<msg timestamp="20190403 01:49:41.826" level="INFO">Clicking link 'id=button-create-template'.</msg>
+<status status="PASS" endtime="20190403 01:49:47.901" starttime="20190403 01:49:41.826"></status>
+</kw>
+<kw name="Input Field Name By ID" library="resource">
+<arguments>
+<arg>template-name</arg>
+<arg>Demonstration Template</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${fieldname}</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 01:49:47.903" level="INFO">Typing text 'Demonstration Template' into text field 'id=template-name'.</msg>
+<status status="PASS" endtime="20190403 01:49:54.126" starttime="20190403 01:49:47.902"></status>
+</kw>
+<status status="PASS" endtime="20190403 01:49:54.126" starttime="20190403 01:49:47.902"></status>
+</kw>
+<kw name="Input Field Name By ID" library="resource">
+<arguments>
+<arg>template-identifier</arg>
+<arg>demo-template</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${fieldname}</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 01:49:54.128" level="INFO">Typing text 'demo-template' into text field 'id=template-identifier'.</msg>
+<status status="PASS" endtime="20190403 01:50:00.275" starttime="20190403 01:49:54.128"></status>
+</kw>
+<status status="PASS" endtime="20190403 01:50:00.276" starttime="20190403 01:49:54.127"></status>
+</kw>
+<kw name="Input Field Name By ID" library="resource">
+<arguments>
+<arg>template-description</arg>
+<arg>"A demo template to show automation"</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${fieldname}</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 01:50:00.277" level="INFO">Typing text '"A demo template to show automation"' into text field 'id=template-description'.</msg>
+<status status="PASS" endtime="20190403 01:50:06.529" starttime="20190403 01:50:00.277"></status>
+</kw>
+<status status="PASS" endtime="20190403 01:50:06.529" starttime="20190403 01:50:00.276"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>addTemplatename.png</arg>
+</arguments>
+<msg timestamp="20190403 01:50:08.967" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="addTemplatename.png"&gt;&lt;img src="addTemplatename.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190403 01:50:08.967" starttime="20190403 01:50:06.529"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>id=button-add-field-textfield</arg>
+</arguments>
+<msg timestamp="20190403 01:50:08.968" level="INFO">Clicking link 'id=button-add-field-textfield'.</msg>
+<status status="PASS" endtime="20190403 01:50:15.056" starttime="20190403 01:50:08.968"></status>
+</kw>
+<kw name="Input Field Name By Label" library="resource">
+<arguments>
+<arg>"Enter Field Name"</arg>
+<arg>Type of Injury</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@aria-label=${fieldlabel}]</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 01:50:15.057" level="INFO">Typing text 'Type of Injury' into text field '//input[@aria-label="Enter Field Name"]'.</msg>
+<status status="PASS" endtime="20190403 01:50:21.173" starttime="20190403 01:50:15.057"></status>
+</kw>
+<status status="PASS" endtime="20190403 01:50:21.173" starttime="20190403 01:50:15.056"></status>
+</kw>
+<kw name="Select Tab" library="resource">
+<arguments>
+<arg>"required-tab"</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[contains(@class, ${tabname})]</arg>
+</arguments>
+<msg timestamp="20190403 01:50:21.175" level="INFO">Clicking element '//div[contains(@class, "required-tab")]'.</msg>
+<status status="PASS" endtime="20190403 01:50:25.239" starttime="20190403 01:50:21.174"></status>
+</kw>
+<status status="PASS" endtime="20190403 01:50:25.240" starttime="20190403 01:50:21.173"></status>
+</kw>
+<kw name="Select Range" library="resource">
+<arguments>
+<arg>"date-range"</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[contains(@class, ${tabname})]</arg>
+</arguments>
+<msg timestamp="20190403 01:50:25.241" level="INFO">Clicking element '//div[contains(@class, "date-range")]'.</msg>
+<status status="PASS" endtime="20190403 01:50:29.304" starttime="20190403 01:50:25.241"></status>
+</kw>
+<status status="PASS" endtime="20190403 01:50:29.304" starttime="20190403 01:50:25.240"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>setRequired.png</arg>
+</arguments>
+<msg timestamp="20190403 01:50:31.726" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="setRequired.png"&gt;&lt;img src="setRequired.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190403 01:50:31.726" starttime="20190403 01:50:29.305"></status>
+</kw>
+<kw name="Select Tab" library="resource">
+<arguments>
+<arg>"value-controlled-terms-tab"</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//div[contains(@class, ${tabname})]</arg>
+</arguments>
+<msg timestamp="20190403 01:50:31.727" level="INFO">Clicking element '//div[contains(@class, "value-controlled-terms-tab")]'.</msg>
+<status status="PASS" endtime="20190403 01:50:35.789" starttime="20190403 01:50:31.727"></status>
+</kw>
+<status status="PASS" endtime="20190403 01:50:35.789" starttime="20190403 01:50:31.726"></status>
+</kw>
+<kw name="Select Ontology Term" library="resource">
+<arguments>
+<arg>"Injury"</arg>
+<arg>"C3671"</arg>
+</arguments>
+<kw name="Click Button By Class" library="resource">
+<arguments>
+<arg>"add"</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[contains(@class, ${btnname})]</arg>
+</arguments>
+<msg timestamp="20190403 01:50:35.791" level="INFO">Clicking element '//button[contains(@class, "add")]'.</msg>
+<status status="PASS" endtime="20190403 01:50:39.878" starttime="20190403 01:50:35.791"></status>
+</kw>
+<status status="PASS" endtime="20190403 01:50:39.879" starttime="20190403 01:50:35.790"></status>
+</kw>
+<kw name="Input Field Name By ID" library="resource">
+<arguments>
+<arg>field-search-input</arg>
+<arg>${ontosearchstring}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${fieldname}</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 01:50:39.880" level="INFO">Typing text '"Injury"' into text field 'id=field-search-input'.</msg>
+<status status="PASS" endtime="20190403 01:50:45.994" starttime="20190403 01:50:39.880"></status>
+</kw>
+<status status="PASS" endtime="20190403 01:50:45.994" starttime="20190403 01:50:39.879"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20190403 01:50:47.999" starttime="20190403 01:50:45.995"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//td[contains(text(), ${ontoterm})]</arg>
+</arguments>
+<msg timestamp="20190403 01:50:47.999" level="INFO">Clicking element '//td[contains(text(), "C3671")]'.</msg>
+<status status="PASS" endtime="20190403 01:50:52.128" starttime="20190403 01:50:47.999"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>selectTerm.png</arg>
+</arguments>
+<msg timestamp="20190403 01:50:54.570" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selectTerm.png"&gt;&lt;img src="selectTerm.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190403 01:50:54.570" starttime="20190403 01:50:52.129"></status>
+</kw>
+<kw name="Click Button By Class" library="resource">
+<arguments>
+<arg>"btn-add-term"</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[contains(@class, ${btnname})]</arg>
+</arguments>
+<msg timestamp="20190403 01:50:54.571" level="INFO">Clicking element '//button[contains(@class, "btn-add-term")]'.</msg>
+<status status="PASS" endtime="20190403 01:50:58.666" starttime="20190403 01:50:54.571"></status>
+</kw>
+<status status="PASS" endtime="20190403 01:50:58.667" starttime="20190403 01:50:54.570"></status>
+</kw>
+<status status="PASS" endtime="20190403 01:50:58.667" starttime="20190403 01:50:35.790"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>addOntologyTerm.png</arg>
+</arguments>
+<msg timestamp="20190403 01:51:01.074" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="addOntologyTerm.png"&gt;&lt;img src="addOntologyTerm.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190403 01:51:01.074" starttime="20190403 01:50:58.667"></status>
+</kw>
+<kw name="Select Ontology Term" library="resource">
+<arguments>
+<arg>"Chemical Exposure"</arg>
+<arg>"C36290"</arg>
+</arguments>
+<kw name="Click Button By Class" library="resource">
+<arguments>
+<arg>"add"</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[contains(@class, ${btnname})]</arg>
+</arguments>
+<msg timestamp="20190403 01:51:01.076" level="INFO">Clicking element '//button[contains(@class, "add")]'.</msg>
+<status status="PASS" endtime="20190403 01:51:05.173" starttime="20190403 01:51:01.075"></status>
+</kw>
+<status status="PASS" endtime="20190403 01:51:05.173" starttime="20190403 01:51:01.075"></status>
+</kw>
+<kw name="Input Field Name By ID" library="resource">
+<arguments>
+<arg>field-search-input</arg>
+<arg>${ontosearchstring}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=${fieldname}</arg>
+<arg>${fieldvalue}</arg>
+</arguments>
+<msg timestamp="20190403 01:51:05.175" level="INFO">Typing text '"Chemical Exposure"' into text field 'id=field-search-input'.</msg>
+<status status="PASS" endtime="20190403 01:51:11.329" starttime="20190403 01:51:05.174"></status>
+</kw>
+<status status="PASS" endtime="20190403 01:51:11.330" starttime="20190403 01:51:05.173"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20190403 01:51:13.335" starttime="20190403 01:51:11.330"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>//td[contains(text(), ${ontoterm})]</arg>
+</arguments>
+<msg timestamp="20190403 01:51:13.336" level="INFO">Clicking element '//td[contains(text(), "C36290")]'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190403 01:51:19.835" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190403 01:51:19.835" starttime="20190403 01:51:17.361"></status>
+</kw>
+<msg timestamp="20190403 01:51:19.838" level="FAIL">Element with locator '//td[contains(text(), "C36290")]' not found.</msg>
+<status status="FAIL" endtime="20190403 01:51:19.838" starttime="20190403 01:51:13.335"></status>
+</kw>
+<status status="FAIL" endtime="20190403 01:51:19.838" starttime="20190403 01:51:01.075"></status>
+</kw>
+<status status="FAIL" endtime="20190403 01:51:19.839" critical="yes" starttime="20190403 01:49:28.717">Element with locator '//td[contains(text(), "C36290")]' not found.</status>
+</test>
+<test id="s1-s1-t3" name="Create New Field">
+<kw name="Click New Button" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>button-create</arg>
+</arguments>
+<msg timestamp="20190403 01:51:19.840" level="INFO">Clicking button 'button-create'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190403 01:51:32.340" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190403 01:51:32.341" starttime="20190403 01:51:29.896"></status>
+</kw>
+<msg timestamp="20190403 01:51:32.341" level="FAIL">Button with locator 'button-create' not found.</msg>
+<status status="FAIL" endtime="20190403 01:51:32.341" starttime="20190403 01:51:19.840"></status>
+</kw>
+<status status="FAIL" endtime="20190403 01:51:32.341" starttime="20190403 01:51:19.840"></status>
+</kw>
+<status status="FAIL" endtime="20190403 01:51:32.342" critical="yes" starttime="20190403 01:51:19.839">Button with locator 'button-create' not found.</status>
+</test>
+<test id="s1-s1-t4" name="Create New Element">
+<kw name="Click New Button" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>button-create</arg>
+</arguments>
+<msg timestamp="20190403 01:51:32.343" level="INFO">Clicking button 'button-create'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190403 01:51:38.386" level="FAIL">UnexpectedAlertPresentException: Alert Text: None
+Message: unexpected alert open: {Alert text : }
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Mac OS X 10.14.0 x86_64)
+</msg>
+<status status="FAIL" endtime="20190403 01:51:38.386" starttime="20190403 01:51:38.382"></status>
+</kw>
+<msg timestamp="20190403 01:51:38.386" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: UnexpectedAlertPresentException: Alert Text: None
+Message: unexpected alert open: {Alert text : }
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Mac OS X 10.14.0 x86_64)
+</msg>
+<msg timestamp="20190403 01:51:38.387" level="FAIL">UnexpectedAlertPresentException: Alert Text: None
+Message: unexpected alert open: {Alert text : }
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Mac OS X 10.14.0 x86_64)
+</msg>
+<status status="FAIL" endtime="20190403 01:51:38.387" starttime="20190403 01:51:32.343"></status>
+</kw>
+<status status="FAIL" endtime="20190403 01:51:38.387" starttime="20190403 01:51:32.343"></status>
+</kw>
+<status status="FAIL" endtime="20190403 01:51:38.387" critical="yes" starttime="20190403 01:51:32.342">UnexpectedAlertPresentException: Alert Text: None
+Message: unexpected alert open: {Alert text : }
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Mac OS X 10.14.0 x86_64)
+</status>
 </test>
 <doc>A test suite with a single test for valid login.</doc>
-<status status="PASS" endtime="20190401 09:13:13.253" starttime="20190401 09:13:05.932"></status>
+<status status="FAIL" endtime="20190403 01:51:38.388" starttime="20190403 01:49:16.814"></status>
 </suite>
-<status status="PASS" endtime="20190401 09:13:13.255" starttime="20190401 09:13:05.911"></status>
+<status status="FAIL" endtime="20190403 01:51:38.392" starttime="20190403 01:49:16.792"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="1">Critical Tests</stat>
-<stat fail="0" pass="1">All Tests</stat>
+<stat fail="3" pass="1">Critical Tests</stat>
+<stat fail="3" pass="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="Automate" pass="1">Automate</stat>
-<stat fail="0" id="s1-s1" name="Valid Login" pass="1">Automate.Valid Login</stat>
+<stat fail="3" id="s1" name="Automate" pass="1">Automate</stat>
+<stat fail="3" id="s1-s1" name="Valid Login" pass="1">Automate.Valid Login</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20190403 01:51:38.386" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: UnexpectedAlertPresentException: Alert Text: None
+Message: unexpected alert open: {Alert text : }
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Mac OS X 10.14.0 x86_64)
+</msg>
 </errors>
 </robot>

@@ -19,7 +19,4 @@ Steps to run the Python Robot Framework:
 @TODO:
 - Sometimes the tests fail since the login cookie/session is stored in the Chrome Simulation Window and the Login Page redirects to the main Dashboard ... Not sure how to deal with that
 - Crop screenshots using CSS 
-- Save screenshots using different names
-- Save screenshots in a specific folder (e.g. screenshots)
-- Proceed to the Dashboard page 
 
